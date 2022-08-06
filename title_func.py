@@ -1,9 +1,8 @@
 #title the words with title function
-name2 = input("Name:\n")
-surname2 = input("Surname:\n")
-
-def capitalize_name(name,surname):
+def name_cap(name, surname):
+    if name == "" and surname == "":
+        return "Your input is not valid!"
     name1 = name.title()
     surname1 = surname.title()
-    print(f"{name1} {surname1}")
-capitalize_name(name2,surname2)
+    return f"{name1} {surname1}"
+print(name_cap(input("Name:\n"),input("Surname:\n")))
